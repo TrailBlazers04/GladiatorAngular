@@ -1,0 +1,17 @@
+
+  .a{
+    background-image: url("src/assets/images/15.jpg");
+    background-repeat: no-repeat;
+  
+    background-size: 1550px 1000px;
+    text-emphasis-color:lightgrey;
+  }
+ 
+
+.log{
+    font-style: inherit;
+}
+.l input{
+    width: 100%;
+    margin-bottom: 20px;
+  }

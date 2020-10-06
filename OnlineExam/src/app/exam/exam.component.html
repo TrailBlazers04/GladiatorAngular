@@ -1,0 +1,49 @@
+<div class="form-group">
+    <label for="topic">Topic</label>
+    <select type="text" name="topic" size="1" class="form-control" [(ngModel)]="top" #topic="ngModel" required>
+      <option value="" selected="selected">Select Topic</option>
+      <option *ngFor="let topic of topics" value="{{ topic }}">{{ topic }}</option>
+    </select>
+  </div>
+  {{top}}
+  <div class="text-center">
+    <button type="button" class="btn btn-success" (click)="fetchQuestion()">Submit</button>
+  </div>
+
+  <div class="card" >
+    <div class="card-body">
+      <form #questionTest="ngForm">
+        <div *ngFor="let ques of list">
+          <div>{{ques.question}}</div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label">Choose Correct Option</label>
+            <div class="col-md-9 col-form-label">
+              <div class="form-check form-check-inline mr-1">
+                <input class="form-check-input" type="radio" name="{{ques}}" >
+                <label class="form-check-label">a) {{ques.optionA}} </label>
+              </div>
+              <div class="form-check form-check-inline mr-1">
+                <input class="form-check-input" type="radio" name="{{ques}}" >
+                <label class="form-check-label">b){{ques.optionB}}</label>
+              </div>
+              <div class="form-check form-check-inline mr-1">
+                <input class="form-check-input" type="radio" name="{{ques}}" >
+                <label class="form-check-label">c){{ques.optionC}}</label>
+              </div>
+              <div class="form-check form-check-inline mr-1">
+                <input class="form-check-input" type="radio" name="{{ques}}" >
+                <label class="form-check-label">d){{ques.optionD}}</label>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-12" style="justify-content: center;display: flex;">
+          <button type="button" class="btn btn-default" style="margin-right: 30px;">Cancel</button>
+          <button type="button" class="btn btn-primary" (click)="submitTest()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+
+#r{
+    background-image: url("src/assets/images/4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: 50% 50%;
+    border-radius: 15px;
+    
+  
+}
+
+.reg{
+    text-align: center;
+}
+
+
+

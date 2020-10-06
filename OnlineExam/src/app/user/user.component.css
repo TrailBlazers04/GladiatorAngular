@@ -1,0 +1,15 @@
+a:hover {
+    
+  background-color: rgba(5, 5, 14, 0.363);
+}
+a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 40px;
+  text-decoration: none;
+}
+.vl {
+  border-left: 4px solid rgba(145, 126, 126, 0.486);
+  height: 60px;
+}

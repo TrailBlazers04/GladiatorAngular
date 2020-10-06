@@ -1,0 +1,64 @@
+<div class="container">
+    <h1>ADMIN : Fill in the details </h1>
+      
+    <form [formGroup]="form" (ngSubmit)="submit()">
+          
+        <div class="form-group">
+            <label for="website">Technology</label>
+            <select formControlName="website" class="form-control" (change)="changeWebsite($event)">
+                <option disabled>Select Technology</option>
+                <option>Choose Technology</option>
+                <option *ngFor="let web of websiteList">{{web}}</option>
+            </select>
+            <div *ngIf="f.website.touched && f.website.invalid" class="alert alert-danger">
+                <div *ngIf="f.website.errors.required">Technology is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="website">State</label>
+            <select formControlName="website" class="form-control" (change)="changeWebsite($event)">
+                <option disabled>Select State</option>
+                <option>Choose State</option>
+                <option *ngFor="let web of websiteList1">{{web}}</option>
+            </select>
+            <div *ngIf="f.website.touched && f.website.invalid" class="alert alert-danger">
+                <div *ngIf="f.website.errors.required">State is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="website">City</label>
+            <select formControlName="website" class="form-control" (change)="changeWebsite($event)">
+                <option disabled>Select City</option>
+                <option>Choose City</option>
+                <option *ngFor="let web of websiteList2">{{web}}</option>
+            </select>
+            <div *ngIf="f.website.touched && f.website.invalid" class="alert alert-danger">
+                <div *ngIf="f.website.errors.required">City is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Marks</label>
+            <select formControlName="website" class="form-control" (change)="changeWebsite($event)">
+                <option disabled>Select Marks</option>
+                <option>Choose Marks</option>
+                <option *ngFor="let web of websiteList3">{{web}}</option>
+            </select>
+            <div *ngIf="f.website.touched && f.website.invalid" class="alert alert-danger">
+                <div *ngIf="f.website.errors.required">Mark is required.</div>
+            </div>
+        </div>
+      
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+   
+
+
+    
+
+
