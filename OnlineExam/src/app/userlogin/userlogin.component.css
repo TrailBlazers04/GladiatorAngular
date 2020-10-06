@@ -1,17 +1,33 @@
 
   .a{
-    background-image: url("src/assets/images/15.jpg");
+    background-image: url("src/assets/images/read.jpg");
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
   
-    background-size: 1550px 1000px;
+    /* background-size: 1550px 1000px; */
     text-emphasis-color:lightgrey;
+    box-shadow:
+        0 2px 2px rgba(0,0,0,0.2),        
+        0 1px 5px rgba(0,0,0,0.2),        
+        0 0 0 12px rgba(255,255,255,0.4); 
+        font-weight: bold;
+   
   }
  
 
 .log{
-    font-style: inherit;
+    font-style: "roboto";
 }
 .l input{
     width: 100%;
     margin-bottom: 20px;
+    background-color: transparent;
+    border-color: black;
   }
+  input:focus {
+    color: #333;
+    border: 1px solid #44c4e7;
+  }
+
+ 

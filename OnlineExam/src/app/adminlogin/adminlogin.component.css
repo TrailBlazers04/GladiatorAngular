@@ -1,6 +1,7 @@
 a:hover {
     
   background-color: rgba(5, 5, 14, 0.363);
+  
 }
 a {
   display: block;
@@ -8,16 +9,25 @@ a {
   text-align: center;
   padding: 12px 40px;
   text-decoration: none;
+  
 }
 .vl {
   border-left: 4px solid rgba(145, 126, 126, 0.486);
   height: 60px;
 }
+ input{
+  background-color: transparent;
+  border-color: black;
+ }
 
 #admlog{
-  background-image: url("src/assets/images/9.jpg");
+  background-position: center;
+  background-image: url("src/assets/images/69.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
+  /* background-attachment: fixed;  */
   background-position: 50% 50%;
   border-radius: 15px;
+  font-weight: bold;
+  
 }

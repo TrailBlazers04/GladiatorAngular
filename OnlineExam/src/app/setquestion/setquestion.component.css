@@ -1,0 +1,14 @@
+.container{
+    background-image: url("src/assets/images/0.jpg");
+    background-position: 50% 50%;
+    padding: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-emphasis-color:lightgrey;
+    box-shadow:
+        0 2px 2px rgba(0,0,0,0.2),        
+        0 1px 5px rgba(0,0,0,0.2),        
+        0 0 0 12px rgba(255,255,255,0.4); 
+        font-weight: bold;
+}

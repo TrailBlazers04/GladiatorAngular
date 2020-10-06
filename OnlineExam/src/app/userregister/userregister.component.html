@@ -1,7 +1,7 @@
 
 <div class="card m-3" id="r">
     <h2 class="reg" >User Registration</h2>
-    <div class="card-body">
+    <div class="card-body" id="s">
         <form #Registerform="ngForm" (ngSubmit)="registerUser()">
             <small [class.text-danger]="msg.status==500">{{ msg.message }}</small>
             <div class="form-row">
