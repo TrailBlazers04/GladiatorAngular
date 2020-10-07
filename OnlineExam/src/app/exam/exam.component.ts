@@ -17,26 +17,28 @@ export class ExamComponent implements OnInit {
 
   quizlist : QuestionClass[] = [];
 
-  j : number = 4;
-
   i: number = 0;
 
   opt : any[];
 
-  selectedanswer : string = '';
+  ans : string; 
+
+  score : number = 0;
 
   radioSel:any;
   radioSelected:string;
   radioSelectedString:string;
 
   constructor(private _service : QuizserviceService, private _router : Router) { 
-      this.radioSelected = "item_3";
+      this.radioSelected = "";
       this.getSelecteditem();
   }
 
   getSelecteditem(){
     
-    this.radioSelectedString = JSON.stringify(this.radioSelected);
+   // this.radioSelectedString = (this.radioSelected);
+    console.log(typeof this.radioSelected);
+    console.log(typeof this.ans);
   }
 
   onItemChange(opt){
@@ -51,19 +53,30 @@ export class ExamComponent implements OnInit {
 		  data => {
         this.quizlist = data;
         this.opt = this.quizlist[this.i].options;
+        this.ans = this.quizlist[this.i].answer;
 		  }
     );
-
     
   }
 
   onClickNext() {
+    console.log(this.ans);
+    console.log(this.radioSelected);
+    this.ans = this.quizlist[this.i].answer;
+    if(this.ans === this.radioSelected){
+      this.score++;
+    }
     this.i++;
     this.opt = this.quizlist[this.i].options;
   }
-  onClickPrev(){
-    this.i--;
+
+  onSubmit() {
+    this.ans = this.quizlist[this.i].answer;
+    if(this.ans === this.radioSelected){
+      this.score++;
+    }
   }
+  
 
   startTimer() {
 	  this._service.timer = setInterval( () => {
@@ -74,5 +87,6 @@ export class ExamComponent implements OnInit {
   answer(qid,choice) {
 
   }
+  
 
 }
