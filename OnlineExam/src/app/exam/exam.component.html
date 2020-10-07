@@ -11,41 +11,24 @@
   <div class="text-center">
     <button type="button" class="btn btn-success" (click)="fetchQuestion()">Start Quiz {{top}}</button>
   </div> 
-  <div class="row"  id="exam">
-    <div class="col s8 offset-s2">
   
-          
-              <span class="card-title">{{ quizlist[i].qid }}</span>
+          <div class="jumbotron">
+              <span >{{ quizlist[i].qid }}</span>
               <p>{{ quizlist[i].question }}</p>
-              <div >
-                <input  type="radio"  >
-                <label >a)  {{ quizlist[i].options[0] }} </label>
-              </div>
-              <div >
-                <input  type="radio" >
-                <label >b){{ quizlist[i].options[1] }}</label>
-              </div>
-              <div >
-                <input  type="radio"  >
-                <label >c){{ quizlist[i].options[2] }}</label>
-              </div>
-              <div >
-                <input  type="radio" >
-                <label >d) {{ quizlist[i].options[3] }}</label>
-              </div>
-            </div>
-          
+              
+              <div class="card-action">
+                <div>
+                  <ul class="list-group">
+                        <li class="list-group-item"  *ngFor="let o of opt">
+                          <input type="radio" [(ngModel)]="radioSelected" name="list_name" value="{{o}}" (change)="onItemChange(o)"/> 
+                          {{o}}
+                          
+                        </li>
+                  </ul>
+                </div>
+             </div>
           </div>
-       
-  
-  
-    
-          <button class="btn btn-success" (click)="onClickPrev()">Prev</button> <br/>
-<button class="btn btn-success" (click)="onClickNext()">Next</button>
-
-
-
-
-  
-
-
+              
+          <button class="btn btn-success" (click)="onClickNext()">Next</button>
+      
+          {{radioSelected}}
