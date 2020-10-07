@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "OnlineExam"
+  "defaultProject": "OnlineExam",
+  "cli": {
+    "analytics": "bb18d157-48f7-4875-a7a2-863832bb35de"
+  }
 }
