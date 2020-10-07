@@ -23,18 +23,18 @@ export class QuizserviceService {
   }
 
   fetchQuizListFromRemote() : Observable<any> {
-    return this._http.get<any>("http://localhost:8080/demo-test/rest/quizlist");
+    return this._http.get<any>("http://localhost:8280/g-rest/rest/quizlist");
   }
 
   addQuestionToRemote(quizquestion : Quizquestion) : Observable<any> {
-    return this._http.post<any>("http://localhost:8080/demo-test/rest/addquizquestion", quizquestion);
+    return this._http.post<any>("http://localhost:8280/g-rest/rest/addquizquestion", quizquestion);
   }
 
   fetchQuizListByTopicFromRemote(topic : string) : Observable<any> {
-    return this._http.get<any>("http://localhost:8080/demo-test/rest/listByTopic/" + topic);
+    return this._http.get<any>("http://localhost:8280/g-rest/rest/listByTopic/" + topic);
   }
 
   fetchNewQuizQuestionByTopicFromRemote(topic : string) : Observable<any> {
-    return this._http.get<any>("http://localhost:8080/gladiator-rest/rest/newFetchByTopic/" + topic);
+    return this._http.get<any>("http://localhost:8280/g-rest/rest/newFetchByTopic/" + topic);
   }
 }
