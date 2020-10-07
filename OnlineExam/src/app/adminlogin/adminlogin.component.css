@@ -15,9 +15,12 @@ a {
 }
 
 #admlog{
-  background-image: url("src/assets/images/9.jpg");
+  background-image: url("src/assets/images/559128.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-position: 50% 50%;
+  /* background-attachment: fixed;  */
+  background-position: 100% 100%;
   border-radius: 15px;
+  
 }
+
+

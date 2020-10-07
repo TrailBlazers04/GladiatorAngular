@@ -1,17 +1,38 @@
 
   .a{
-    background-image: url("src/assets/images/15.jpg");
+    background-image: url("src/assets/images/2.jpg");
     background-repeat: no-repeat;
-  
-    background-size: 1550px 1000px;
+    
+    background-size: 900px 700px;
     text-emphasis-color:lightgrey;
+    width:90%;
+    border-radius: 10px;
   }
  
 
 .log{
-    font-style: inherit;
+    font-style: unset;
+    text-align: center;
+    padding-left: -5px;
 }
 .l input{
     width: 100%;
     margin-bottom: 20px;
   }
+
+  .container {
+    position: relative;
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto; /* Center it */
+  }
+  
+  .container .content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.4); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+  }
+  

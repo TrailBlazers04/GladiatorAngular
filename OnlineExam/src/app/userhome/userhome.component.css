@@ -96,9 +96,9 @@
 
 
   .userhome_div{
-    background-image: url("src/assets/images/14.jpg");
+    background-image: url("src/assets/images/hack.jpg");
     background-repeat: no-repeat;
-  
+    background-attachment: fixed; 
     background-size: 1550px 1000px;
     text-emphasis-color:lightgrey;
   }
