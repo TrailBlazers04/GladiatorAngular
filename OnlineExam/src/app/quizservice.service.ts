@@ -35,6 +35,6 @@ export class QuizserviceService {
   }
 
   fetchNewQuizQuestionByTopicFromRemote(topic : string) : Observable<any> {
-    return this._http.get<any>("http://localhost:8080/gladiator-rest/rest/newFetchByTopic/" + topic);
+    return this._http.get<any>("http://localhost:8080/demo-test/rest/newFetchByTopic/" + topic);
   }
 }

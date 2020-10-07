@@ -11,7 +11,7 @@ export class RegistrationService {
   constructor( private _http : HttpClient) { }
 
   public loginUserFromRemote(user : User) : Observable<any> {
-    return this._http.post<any>("http://localhost:8080/demo-rest/rest/login", user);
+    return this._http.post<any>("http://localhost:8080/demo-test/rest/login", user);
   }
 
   public registerUserFromRemote(user : User) : Observable<any> {

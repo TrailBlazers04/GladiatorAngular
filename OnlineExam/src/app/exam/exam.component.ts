@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuestionClass } from '../questionclass';
+import { Quizquestion } from '../quizquestion';
 import { QuizserviceService } from '../quizservice.service';
 
 
@@ -60,6 +61,9 @@ export class ExamComponent implements OnInit {
     this.i++;
     this.opt = this.quizlist[this.i].options;
   }
+  onClickPrev(){
+    this.i--;
+  }
 
   startTimer() {
 	  this._service.timer = setInterval( () => {
@@ -70,16 +74,5 @@ export class ExamComponent implements OnInit {
   answer(qid,choice) {
 
   }
-
- /*  next() {   
-		++this.i;
-		this.question = this.quizlist[this.i].question;
-		this.option = this.quizlist[this.i].options;
-  }
-  previous() {
-		--this.i;
-		this.question = this.quizlist[this.i].question;
-		this.option = this.quizlist[this.i].options;
-  } */
 
 }
