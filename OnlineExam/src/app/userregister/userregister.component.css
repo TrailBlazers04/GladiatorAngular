@@ -1,8 +1,9 @@
 
 #r{
-    /* background-image: url("src/assets/images/4.jpg");
+    background-image: url("src/assets/images/code2.jpg");
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
+    opacity: 0.95;
     
     background-attachment: fixed; 
     background-position: 50% 50%; 

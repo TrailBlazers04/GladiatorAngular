@@ -21,11 +21,17 @@ a {
  }
 
 #admlog{
-  background-image: url("src/assets/images/559128.jpg");
+  background-image: url("src/assets/images/29.jpg");
   background-repeat: no-repeat;
   /* background-attachment: fixed;  */
-  background-position: 100% 100%;
+  background-position: 80% 10%;
   border-radius: 15px;
+
+
+   
+    background-size: 1800px 850px;
+   
+ 
   
 }
 
