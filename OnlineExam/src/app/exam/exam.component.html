@@ -9,75 +9,27 @@
   <div class="text-center">
     <button type="button" class="btn btn-success" (click)="fetchQuestion()">Submit</button>
   </div> 
-  <div class="row" >
-    <div class="col s8 offset-s2">
+
   
-          
-              <span class="card-title">{{ quizlist[i].qid }}</span>
+          <div class="jumbotron">
+              <span >{{ quizlist[i].qid }}</span>
               <p>{{ quizlist[i].question }}</p>
-              <div >
-                <input class="form-check-input" type="radio"  >
-                <label class="form-check-label">a)  {{ quizlist[i].options[0] }} </label>
-              </div>
-              <div >
-                <input class="form-check-input" type="radio" >
-                <label class="form-check-label">b){{ quizlist[i].options[1] }}</label>
-              </div>
-              <div >
-                <input class="form-check-input" type="radio"  >
-                <label class="form-check-label">c){{ quizlist[i].options[2] }}</label>
-              </div>
-              <div >
-                <input class="form-check-input" type="radio" >
-                <label class="form-check-label">d) {{ quizlist[i].options[3] }}</label>
-              </div>
-            </div>
-           <!--  <div class="card-action">
-               <ul class="collection answer">
-                <ng-container *ngFor="let option of quizlist[i].options;let j = index">
-                  <li *ngIf="option != null" class="collection-item" (click)="answer(quizlist[i].qid,j)">
-                   
-                  </li>
-                </ng-container>
-              </ul> 
-            </div> -->
+              
+              <div class="card-action">
+                <div>
+                  <ul class="list-group">
+                        <li class="list-group-item"  *ngFor="let o of opt">
+                          <input type="radio" [(ngModel)]="radioSelected" name="list_name" value="{{o}}" (change)="onItemChange(o)"/> 
+                          {{o}}
+                          
+                        </li>
+                  </ul>
+                </div>
+             </div>
           </div>
-       
-  
-  
-    
+              
+          <button class="btn btn-success" (click)="onClickNext()">Next</button>
 
-<button class="btn btn-success" (click)="onClickNext()">Next</button>
+          
 
-
-
-
-<!-- <div class="jumbotron">
-    <div class="questionBox">
-      <ul> {{ question }} </ul> 
-    </div>
-<<<<<<< HEAD
-      <ul *ngFor="let opt of option">
-            <div class="checkbox">
-              <label>
-               <input type="checkbox" (click)="check($event,opt)">
-             {{opt}}
-                  <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-              </label>
-            </div>
-      </ul>
-      <button (click)="previous()"*ngIf="i>0" >previous</button>
-      <button  (click)="next()" *ngIf="i<quizlength">next</button>
-  
-</div>
-  
-  
-  <div>
-    <button class="btn btn-info" (click)="generatemark()">submit</button>
-  </div> -->
-=======
-  </div>
-  
-
-
->>>>>>> 8ccda8b5d61388fc47973a5d2b70e28b16f76ad4
+          {{radioSelected}}
