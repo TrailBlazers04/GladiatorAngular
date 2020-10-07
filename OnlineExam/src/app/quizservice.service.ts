@@ -11,15 +11,15 @@ export class QuizserviceService {
   constructor(private _http : HttpClient) { }
 
   fetchQuizListFromRemote() : Observable<any> {
-    return this._http.get<any>("http://localhost:8080/gladiator-rest/rest/quizlist");
+    return this._http.get<any>("http://localhost:8080/demo-test/rest/quizlist");
   }
 
   addQuestionToRemote(quizquestion : Quizquestion) : Observable<any> {
-    return this._http.post<any>("http://localhost:8080/gladiator-rest/rest/addquizquestion", quizquestion);
+    return this._http.post<any>("http://localhost:8080/demo-test/rest/addquizquestion", quizquestion);
   }
 
   fetchQuizListByTopicFromRemote(topic : string) : Observable<any> {
-    return this._http.get<any>("http://localhost:8080/gladiator-rest/rest/listByTopic/" + topic);
+    return this._http.get<any>("http://localhost:8080/demo-test/rest/listByTopic/" + topic);
   }
 
 }
