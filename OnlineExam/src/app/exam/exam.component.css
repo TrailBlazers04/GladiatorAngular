@@ -7,8 +7,9 @@
   background-repeat: no-repeat;
 }
 #selectexam{
-    width: 50%;
-    position: absolute;
+    width: 100%;
+   
+    
 }
 
 .container {
@@ -34,4 +35,5 @@
   #report{
     border: 3px solid #73AD21;
     text-align: center;
+    background-color: grey;
   }

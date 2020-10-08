@@ -1,4 +1,13 @@
+<div *ngIf="div2" id="report">
+  <img src="/assets/images/code3.jpg">
+  <h1>Your Score in {{top}} is {{score}}</h1><br/><br/>
+  <h2>Shortlist to be Announced soon...</h2>
+  <button class="btn btn-danger" routerLink="/userhome">Return to Den</button>
+</div>
+
+
 <div class="form-group" id="selectexam" *ngIf="div1">
+  <h2>Select the topic to want to take Quiz in..</h2>
     <label for="topic">Topic</label>
     <select type="text" name="topic" size="1" class="form-control" [(ngModel)]="top" #topic="ngModel" required>
       <option value="" selected="selected">Select Topic</option>
@@ -13,9 +22,10 @@
   <br/><br/><br/><br/><br/>
    
   
-  
-          <div class="jumbotron" *ngIf="div3">
-              <span >{{ quizlist[i].qid }}</span>
+  <div  *ngIf="div3"><h2 style="text-align: center;">{{top}} Quiz</h2>
+          <div class="jumbotron">
+              <!-- <span >{{ quizlist[i].qid }}</span> -->
+              <span >Question:</span>
               <p>{{ quizlist[i].question }}</p>
               
               <div class="card-action">
@@ -32,13 +42,10 @@
           <button class="btn btn-success" (click)="onSubmit()">Submit</button><br/><br/><br/><br/><br/><br/>
              </div>
           </div>
+        </div>
               
           
       
          
 
-          <div *ngIf="div2" id="report">
-            <h1>Quiz Report</h1><br/><br/>
-            <h2>Your Score in {{top}} is {{score}}</h2>
-            <button class="btn btn-danger" routerLink="/userhome">Return to Den</button>
-          </div>
+         
