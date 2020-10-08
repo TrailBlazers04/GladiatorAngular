@@ -1,18 +1,20 @@
-<div class="form-group" id="selectexam">
+<div class="form-group" id="selectexam" *ngIf="div1">
     <label for="topic">Topic</label>
     <select type="text" name="topic" size="1" class="form-control" [(ngModel)]="top" #topic="ngModel" required>
       <option value="" selected="selected">Select Topic</option>
       <option *ngFor="let topic of topics" value="{{ topic }}">{{ topic }}</option>
     </select>
+    <div class="text-center">
+      <button type="button" class="btn btn-success" (click)="fetchQuestion()">Start Quiz</button>
+    </div>
 </div>
-  {{top}}
+
   <br/>
   <br/><br/><br/><br/><br/>
-  <div class="text-center">
-    <button type="button" class="btn btn-success" (click)="fetchQuestion()">Start Quiz</button>
-  </div> 
+   
   
-          <div class="jumbotron">
+  
+          <div class="jumbotron" *ngIf="div3">
               <span >{{ quizlist[i].qid }}</span>
               <p>{{ quizlist[i].question }}</p>
               
@@ -26,10 +28,17 @@
                         </li>
                   </ul>
                 </div>
+                <button class="btn btn-success" (click)="onClickNext()" id="nextbutton">Next</button>
+          <button class="btn btn-success" (click)="onSubmit()">Submit</button><br/><br/><br/><br/><br/><br/>
              </div>
           </div>
               
-          <button class="btn btn-success" (click)="onClickNext()">Next</button>
-          <button class="btn btn-success" (click)="onSubmit()">Submit</button>
+          
       
-          {{radioSelected}} {{quizlist[i].answer}} {{score}} {{j}}
+         
+
+          <div *ngIf="div2" id="report">
+            <h1>Quiz Report</h1><br/><br/>
+            <h2>Your Score in {{top}} is {{score}}</h2>
+            <button class="btn btn-danger" routerLink="/userhome">Return to Den</button>
+          </div>
