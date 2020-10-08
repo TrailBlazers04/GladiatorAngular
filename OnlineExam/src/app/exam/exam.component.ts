@@ -24,6 +24,9 @@ export class ExamComponent implements OnInit {
   ans : string; 
 
   score : number = 0;
+  div2 : boolean = false;
+  div1 : boolean = true;
+  div3: boolean=false;
 
   radioSel:any;
   radioSelected:string;
@@ -56,6 +59,9 @@ export class ExamComponent implements OnInit {
         this.ans = this.quizlist[this.i].answer;
 		  }
     );
+
+    this.div1=false;
+    this.div3=true;
     
   }
 
@@ -75,6 +81,8 @@ export class ExamComponent implements OnInit {
     if(this.ans === this.radioSelected){
       this.score++;
     }
+    this.div2=true;
+    this.div3=false;
   }
   
 
